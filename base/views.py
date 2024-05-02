@@ -1,12 +1,30 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from .models import Block
-from .scripts.urlgenerator import generate_url
+from .scripts.url_generator import generate_url
 from .forms import BlockForm
+from datetime import timedelta, datetime
+from django.utils import timezone
 
 
 def index(request):
-    context = {'title': 'Home Page'}
+
+    blocks = []
+
+    if request.user.is_authenticated:
+        user_blocks = Block.objects.filter(user=request.user)
+        blocks = user_blocks
+        for b in user_blocks:
+            lifetime = b.created + timedelta(minutes=int(b.delete_after))
+            now = timezone.now()
+            if now >= lifetime:
+                b.delete()
+
+    context = {
+        'title': 'Home Page',
+        'blocks': blocks,
+    }
+
     return render(request, 'base/base.html', context)
 
 

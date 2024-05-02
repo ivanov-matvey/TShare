@@ -2,5 +2,16 @@
 
 
 {% block content %}
-  <h1>{{ title }}</h1>
+
+  {% for b in blocks %}
+    <p>{{ b.text|truncatechars:256 }}</p>
+
+    <div class="copy-link">
+      <input type="text" class="copy-link-input" value="http://127.0.0.1:8000/{{ b.url }}" readonly>
+      <button type="button" class="copy-link-button">Copy</button>
+    </div>
+  {% endfor %}
+
+  <script src="static/js/copy_text.js"></script>
+
 {% endblock content %}
