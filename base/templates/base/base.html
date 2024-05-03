@@ -3,14 +3,24 @@
 
 {% block content %}
 
-  {% for b in blocks %}
-    <p>{{ b.text|truncatechars:256 }}</p>
+  <h1>Your Blocks</h1>
 
-    <div class="copy-link">
-      <input type="text" class="copy-link-input" value="http://127.0.0.1:8000/{{ b.url }}" readonly>
-      <button type="button" class="copy-link-button">Copy</button>
-    </div>
-  {% endfor %}
+  {% if blocks|length > 0 %}
+    {% for b in blocks %}
+      <div>
+        <a href="{% url 'edit-block' b.url %}">Edit</a>
+        <a href="{% url 'delete-block' b.url %}">Delete</a>
+        <a href="{% url 'block' b.url %}"><p>{{ b.text|truncatechars:256 }}</p></a>
+
+        <div class="copy-link">
+          <input type="text" class="copy-link-input" value="http://127.0.0.1:8000/{{ b.url }}" readonly>
+          <button type="button" class="copy-link-button">Copy</button>
+        </div>
+      </div>
+    {% endfor %}
+  {% else %}
+    <p>You don't have any blocks yet</p>
+  {% endif %}
 
   <script src="static/js/copy_text.js"></script>
 

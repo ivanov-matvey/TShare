@@ -1,0 +1,11 @@
+{% extends 'main.html' %}
+
+
+{% block content %}
+  {% if request.user.is_authenticated and request.user == content.user %}
+    <a href="{% url 'edit-block' content.url %}">Edit</a>
+    <a href="{% url 'delete-block' content.url %}">Delete</a>
+  {% endif %}
+  <h1>{{ content.user }}</h1>
+  <p>{{ content.text }}</p>
+{% endblock content %}
