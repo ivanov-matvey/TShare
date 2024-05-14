@@ -1,0 +1,192 @@
+.material-icons {
+  font-family: 'Material Icons', serif;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'liga';
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: bold;
+  text-align: start;
+  margin: 0 0 8px 0;
+  width: 100%;
+  color: #262629;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  height: 64px;
+  margin: 0 auto;
+  padding: 0 128px;
+  align-items: center;
+  box-shadow: #eeeeee 0 8px 16px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  margin: 32px auto;
+  width: 800px;
+  align-items: center;
+  gap: 24px;
+}
+
+.logo a {
+  margin-inline-start: auto;
+  font-size: 32px;
+  font-weight: bold;
+  color: #4A3BF3;
+  text-decoration: none;
+}
+
+.header-nav {
+  margin-inline-start: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 64px;
+}
+
+.header-user {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 24px;
+  color: #262629;
+}
+
+.header-user a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #F53A3A;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.button-create {
+  height: 48px;
+  width: 148px;
+  border-radius: 8px;
+  background: #4A3BF3;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  line-height: 48px;
+}
+
+.button-create {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.card {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: #eeeeee 0 8px 16px;
+  box-sizing: border-box;
+  padding: 24px;
+}
+
+.card-actions {
+  display: flex;
+  gap: 16px;
+}
+
+.card-actions .edit {
+  color: #4A3BF3;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.card-actions .delete {
+  color: #F53A3A;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.card .text {
+  color: #262629;
+  text-decoration: none;
+  margin: 16px 0;
+}
+
+.card .text p {
+  height: 64px;
+  line-height: 140%;
+  -webkit-line-clamp: 3;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.copy-link {
+  display: flex;
+  width: 100%;
+  gap: 8px;
+}
+
+.copy-link input {
+  width: 100%;
+  margin: auto;
+  height: 44px;
+  padding: 0 16px;
+  border-radius: 8px;
+  border: 2px solid #EAEAEA;
+  background-color: #ffffff;
+  font-size: 16px;
+}
+
+.copy-link input:hover {
+  border-color: #4A3BF3;
+}
+
+.copy-link input:focus {
+  border-color: #4A3BF3;
+  outline:none;
+}
+
+.copy-link button {
+  display: flex;
+  height: 48px;
+  padding: 8px 24px 8px 24px;
+  align-items: center;
+  border-radius: 8px;
+  border: 2px solid #4A3BF3;
+  background: #ffffff;
+  color: #4A3BF3;
+  font-weight: bold;
+  font-size: 16px;
+  white-space: nowrap;
+}
+
+.copy-link button:hover {
+  cursor:pointer;
+  background: #4A3BF3;
+  color: #ffffff;
+}

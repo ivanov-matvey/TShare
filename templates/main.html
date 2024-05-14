@@ -4,6 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <title>{{ title }}</title>
+  <link rel="stylesheet" href="{% static 'base/css/styles.css' %}" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
 
@@ -17,8 +19,12 @@
 </ul>
 {% endif %}
 
-{% block content %}
-{% endblock %}
+
+<div class="content">
+  {% block content %}
+  {% endblock %}
+</div>
+
 
 </body>
 </html>

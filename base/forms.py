@@ -7,3 +7,7 @@ class BlockForm(ModelForm):
         model = Block
         fields = '__all__'
         exclude = ['user', 'url', 'created', 'updated']
+        help_texts = {
+            'username': None,
+            'email': None,
+        }

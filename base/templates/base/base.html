@@ -2,19 +2,20 @@
 
 
 {% block content %}
-
   <h1>Your Blocks</h1>
 
   {% if blocks|length > 0 %}
     {% for b in blocks %}
-      <div>
-        <a href="{% url 'edit-block' b.url %}">Edit</a>
-        <a href="{% url 'delete-block' b.url %}">Delete</a>
-        <a href="{% url 'block' b.url %}"><p>{{ b.text|truncatechars:256 }}</p></a>
+      <div class="card">
+        <div class="card-actions">
+          <a class="edit" href="{% url 'edit-block' b.url %}">Edit</a>
+          <a class="delete" href="{% url 'delete-block' b.url %}">Delete</a>
+        </div>
+        <a class="text" href="{% url 'block' b.url %}"><p>{{ b.text }}</p></a>
 
         <div class="copy-link">
-          <input type="text" class="copy-link-input" value="http://127.0.0.1:8000/{{ b.url }}" readonly>
-          <button type="button" class="copy-link-button">Copy</button>
+          <input type="text" class="copy-link-input" value="{{ link }}/{{ b.url }}" readonly>
+          <button type="button" class="copy-link-button">Copy Link</button>
         </div>
       </div>
     {% endfor %}
@@ -22,6 +23,5 @@
     <p>You don't have any blocks yet</p>
   {% endif %}
 
-  <script src="static/js/copy_text.js"></script>
-
+  <script src="static/base/js/copy_text.js"></script>
 {% endblock content %}

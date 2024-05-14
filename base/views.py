@@ -77,6 +77,7 @@ def index(request):
     context = {
         'title': 'Home Page',
         'blocks': blocks,
+        'link': 'http://127.0.0.1:8000'
     }
 
     return render(request, 'base/base.html', context)
@@ -134,7 +135,10 @@ def delete_block(request, url):
 
 
 def block(request, url):
-    block = Block.objects.get(url=url)
+    try:
+        block = Block.objects.get(url=url)
+    except:
+        block = None
 
     context = {'content': block}
     return render(request, 'base/block.html', context)

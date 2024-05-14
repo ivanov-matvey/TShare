@@ -11,5 +11,6 @@ document.querySelectorAll(".copy-link").forEach(copyLinkContainer => {
 
     inputField.value = "Copied!";
     setTimeout(() => inputField.value = text, 2000);
+    setTimeout(() => inputField.blur(), 2000);
   });
 });

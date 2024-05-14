@@ -25,7 +25,13 @@
       <form action="" method="POST">
         {% csrf_token %}
 
-        {{ form.as_p }}
+        {% for field in form %}
+            {{ field.errors }}
+            {{ field.label_tag }}
+            {{ field }}
+        {% endfor %}
+
+<!--        {{ form.as_p }}-->
         <input type="submit" value="Register">
       </form>
 
