@@ -15,3 +15,5 @@ This web application can be useful for forwarding a block of text that will be d
 ![registration2](https://github.com/ivanov-matvey/TShare/assets/143811480/f876dd16-b19f-4ef7-a6f4-6e0ea19e77e0)
 ### Authorization
 ![authorization](https://github.com/ivanov-matvey/TShare/assets/143811480/7371794e-358b-463a-ada5-d281cf17f2fe)
+### Creating a text block
+![create](https://github.com/ivanov-matvey/TShare/assets/143811480/973e01cd-99dc-4217-ba09-c8d58e5293b1)
