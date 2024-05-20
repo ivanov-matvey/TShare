@@ -3,6 +3,6 @@
 </p>
 
 <p align="center">
-  <img alt="Static Badge" src="https://img.shields.io/badge/5.0.4-darkgreen?style=flat&label=Django">
-  <img alt="Static Badge" src="https://img.shields.io/badge/MIT-green?style=flat&label=License">
+  <img alt="Static Badge" src="https://img.shields.io/badge/5.0.4-%23006400?style=flat&label=Django">
+  <img alt="Static Badge" src="https://img.shields.io/badge/MIT-%2332CD32?style=flat&label=License">
 </p>
