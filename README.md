@@ -1,2 +1,3 @@
 <p align="center">
-  <img src="" alt="Project Logo" width="512">
+  <img src="https://imgur.com/lV2FAFz" alt="Project Logo" width="512">
+</p>
