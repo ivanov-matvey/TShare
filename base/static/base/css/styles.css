@@ -57,7 +57,7 @@ body {
   margin: 96px auto;
   width: 800px;
   align-items: center;
-  gap: 24px;
+  gap: 32px;
 }
 
 .logo a {
@@ -114,18 +114,25 @@ body {
   padding: 24px;
 }
 
+.cards {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 16px;
+}
+
 .card-actions {
   display: flex;
   gap: 16px;
 }
 
-.card-actions .edit {
+.edit {
   color: #4A3BF3;
   text-decoration: none;
   font-weight: bold;
 }
 
-.card-actions .delete {
+.delete {
   color: #F53A3A;
   text-decoration: none;
   font-weight: bold;
@@ -161,6 +168,7 @@ body {
   border-radius: 8px;
   border: 2px solid #EAEAEA;
   background-color: #ffffff;
+  color: #262629;
   font-size: 16px;
 }
 
@@ -311,4 +319,193 @@ button:hover {
   cursor:pointer;
   background: #4A3BF3;
   color: #ffffff;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.back-btn {
+  display: flex;
+  width: 80px;
+  color: #4A3BF3;
+  text-decoration: none;
+  font-weight: bold;
+  align-items: center;
+  padding: 8px 0;
+  gap: 4px;
+}
+
+.actions-block {
+  display: flex;
+  width: 100%;
+  gap: 16px;
+}
+
+.actions-block p {
+  margin: 0;
+  width: 100%;
+  color: #808083;
+  font-weight: bold;
+}
+
+.text {
+  color: #262629;
+  line-height: 140%;
+  margin: 0;
+}
+
+.block {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.delete-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.delete-form p {
+  color: #262629;
+  font-size: 24px;
+  margin: 0;
+}
+
+.delete-form-actions {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+  justify-content: center
+}
+
+.delete-form-actions a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  background: #4A3BF3;
+  border: 2px solid #4A3BF3;
+  border-radius: 8px;
+  height: 32px;
+  width: 80px;
+  text-align: center;
+  line-height: 32px;
+}
+
+.delete-form-actions a:hover {
+  background: #ffffff;
+  color: #4A3BF3;
+  border: 2px #4A3BF3 solid;
+}
+
+.delete-form-actions input {
+  width: 80px;
+  height: 36px;
+  border-radius: 8px;
+  color: #F53A3A;
+  background: #ffffff;
+  border: 2px #F53A3A solid;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.delete-form-actions input:hover {
+  color: #ffffff;
+  background: #F53A3A;
+  border: none;
+  cursor: pointer;
+  box-shadow: #FFB2B2 0 4px 16px;
+}
+
+.login-register {
+  display: flex;
+  width: 400px;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.fields {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 16px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: #262629;
+}
+
+.field input {
+  box-sizing: border-box;
+  width: 400px;
+  height: 48px;
+  padding: 0 16px;
+  border-radius: 8px;
+  border: 2px solid #EAEAEA;
+  background-color: #ffffff;
+  color: #262629;
+  font-size: 16px;
+}
+
+.field input:hover {
+  border-color: #4A3BF3;
+}
+
+.field input:focus {
+  border-color: #4A3BF3;
+  outline:none;
+}
+
+.hint {
+  display: flex;
+  justify-content: center;
+  color: #262629;
+}
+
+.hint a {
+  color: #4A3BF3;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.button {
+  display: flex;
+  height: 48px;
+  padding: 8px 24px 8px 24px;
+  justify-content: center;
+  border-radius: 8px;
+  border: 2px solid #4A3BF3;
+  background: #4A3BF3;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.button:hover {
+  cursor:pointer;
+  border: 2px solid #4A3BF3;
+  background: #ffffff;
+  color: #4A3BF3;
+}
+
+.messages {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 400px;
+  gap: 8px;
+}
+
+.messages p {
+  width: 100%;
+  color: #F53A3A;
+  margin: 0;
 }

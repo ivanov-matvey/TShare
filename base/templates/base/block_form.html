@@ -2,7 +2,12 @@
 
 
 {% block content %}
-  <h1>Create Block</h1>
+  <div class="title">
+    {% if request.user.is_authenticated %}
+      <a class="back-btn" href="{% url 'index' %}"><span class="material-icons md-24">arrow_back</span>Back</a>
+    {% endif %}
+    <h1>Create Block</h1>
+  </div>
 
   <form class="create" action="" method="POST">
     {% csrf_token %}

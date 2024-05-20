@@ -2,41 +2,56 @@
 
 
 {% block content %}
+  <div class="messages">
+    {% for message in messages %}
+      <p>{{ message }}</p>
+    {% endfor %}
+  </div>
 
   {% if page == 'login' %}
     <div>
-      <form action="" method="POST">
+      <form class="login-register" action="" method="POST">
         {% csrf_token %}
 
-        <label>Username:</label>
-        <input type="text" name="username" placeholder="Username">
+        <div class="fields">
+          <div class="field">
+            <label>Username</label>
+            <input type="text" name="username" placeholder="">
+          </div>
 
-        <label>Password:</label>
-        <input type="password" name="password" placeholder="Password">
+          <div class="field">
+            <label>Password</label>
+            <input type="password" name="password" placeholder="">
+          </div>
+        </div>
 
-        <input type="submit" value="Login">
+        <input class="button" type="submit" value="Login">
       </form>
 
-      <p>Haven't signed up yet?</p>
-      <a href="{% url 'register' %}">Sign up</a>
+      <div class="hint">
+        <p>Haven't signed up yet? <a href="{% url 'register' %}">Sign up</a></p>
+      </div>
     </div>
   {% else %}
     <div>
-      <form action="" method="POST">
+      <form class="login-register" action="" method="POST">
         {% csrf_token %}
 
-        {% for field in form %}
-            {{ field.errors }}
-            {{ field.label_tag }}
-            {{ field }}
-        {% endfor %}
+        <div class="fields">
+          {% for field in form %}
+            <div class="field">
+              <label>{{ field.label_tag }}</label>
+              {{ field }}
+            </div>
+          {% endfor %}
+        </div>
 
-<!--        {{ form.as_p }}-->
-        <input type="submit" value="Register">
+        <input class="button" type="submit" value="Register">
       </form>
 
-      <p>Already signed?</p>
-      <a href="{% url 'login' %}">Login</a>
+      <div class="hint">
+        <p>Already signed? <a href="{% url 'login' %}">Login</a></p>
+      </div>
     </div>
   {% endif %}
 

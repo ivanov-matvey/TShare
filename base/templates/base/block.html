@@ -2,10 +2,21 @@
 
 
 {% block content %}
-  {% if request.user.is_authenticated and request.user == content.user %}
-    <a href="{% url 'edit-block' content.url %}">Edit</a>
-    <a href="{% url 'delete-block' content.url %}">Delete</a>
-  {% endif %}
-  <h1>{{ content.user }}</h1>
-  <p>{{ content.text }}</p>
+  <div class="title">
+    {% if request.user.is_authenticated and request.user == content.user %}
+      <a class="back-btn" href="{% url 'index' %}"><span class="material-icons md-24">arrow_back</span>Back</a>
+    {% endif %}
+  </div>
+
+  <div class="block">
+    <div class="actions-block">
+      <p>@{{ content.user }}</p>
+      {% if request.user.is_authenticated and request.user == content.user %}
+        <a class="edit" href="{% url 'edit-block' content.url %}">Edit</a>
+        <a class="delete" href="{% url 'delete-block' content.url %}">Delete</a>
+      {% endif %}
+    </div>
+
+    <p class="text">{{ content.text }}</p>
+  </div>
 {% endblock content %}

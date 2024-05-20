@@ -66,7 +66,7 @@ def index(request):
     blocks = []
 
     if request.user.is_authenticated:
-        user_blocks = Block.objects.filter(user=request.user)
+        user_blocks = Block.objects.filter(user=request.user).order_by('-created')
         for b in user_blocks:
             lifetime = b.created + timedelta(minutes=int(b.delete_after))
             now = timezone.now()
@@ -97,7 +97,10 @@ def create_block(request):
             form.save()
             return redirect('index')
 
-    context = {'form': form}
+    context = {
+        'title': 'Create Block',
+        'form': form,
+    }
     return render(request, 'base/block_form.html', context)
 
 
