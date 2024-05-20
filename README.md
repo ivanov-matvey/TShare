@@ -9,3 +9,7 @@
 
 ## About
 This web application can be useful for forwarding a block of text that will be deleted after a specified time. When you create a block of text, you can choose the time after which it should be deleted. You can then copy the link to the block of text on the main page and share it with other users.
+
+## Overview
+### Registration
+![registration2](https://github.com/ivanov-matvey/TShare/assets/143811480/f876dd16-b19f-4ef7-a6f4-6e0ea19e77e0)
