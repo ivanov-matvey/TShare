@@ -1,7 +1,9 @@
+{% load static %}
+
 <div class="header">
 
   <div class="inner">
-    <div class="logo"><a href="/"><img src="static/base/media/logo.svg" alt="Logo">TShare</a></div>
+    <div class="logo"><a href="/"><img src="{% static 'base/media/logo.svg' %}" alt="Logo">TShare</a></div>
 
     <div class="header-nav">
       {% if request.user.is_authenticated %}
