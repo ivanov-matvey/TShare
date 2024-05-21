@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://matvenoid.pythonanywhere.com" target="_blank">
+  <a href="https://matvenoid.pythonanywhere.com" target="blank">
     <img src="https://i.ibb.co/QHdNXBN/logo.png" alt="logo" border="0">
   </a>
 </p>
